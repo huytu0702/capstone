@@ -98,11 +98,19 @@ function del_traveller(btn) {
     }
 }
 
-function book_submit() {
-    let pcount = document.querySelector("#p-count");
-    if(parseInt(pcount.value) > 0) {
-        return true;
+function addPassenger() {
+    const passengerCount = document.querySelectorAll('.passenger-form').length;
+    if (passengerCount >= 9) {
+        alert("Không thể đặt quá 9 hành khách trong một lần");
+        return;
     }
-    alert("Please add atleast one passenger.")
-    return false;
+    // ... rest of the function
+}
+
+function book_submit() {
+    if (document.querySelectorAll('.passenger-form').length === 0) {
+        alert("Vui lòng thêm ít nhất một hành khách");
+        return false;
+    }
+    return true;
 }

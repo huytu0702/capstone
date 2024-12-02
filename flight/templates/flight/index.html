@@ -8,10 +8,10 @@
 {% endblock head %}
 
 {% block body %}
-    <section class="section first-section" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('{% static 'img/plane3.12.jpg'%}');">
+    <section class="section first-section banner-background">
         <div class="banner-div">
             <div class="banner">
-            <h1 class="banner-text">Book Domestic and International Flight Tickets</h1>
+            <h1 class="banner-text">Đặt chỗ chuyến bay nội địa và quốc tế</h1>
             </div>
         </div>
         <div class="search-flight">
@@ -22,17 +22,17 @@
                         <div class="input-row" style="display: flex;">
                         <div class="form-check-inline">
                             <label class="form-check-label">
-                            <input type="radio" class="form-check-input trip-type" id="one-way" name="TripType" value="1" checked>One-way
+                            <input type="radio" class="form-check-input trip-type" id="one-way" name="TripType" value="1" checked>Một chiều
                             </label>
                         </div>
                         <div class="form-check-inline">
                             <label class="form-check-label">
-                            <input type="radio" class="form-check-input trip-type" id="round-trip" name="TripType" value="2" {% if trip_type == '2' %}checked{% endif %}>Round Trip
+                            <input type="radio" class="form-check-input trip-type" id="round-trip" name="TripType" value="2" {% if trip_type == '2' %}checked{% endif %}>Khứ hồi
                             </label>
                         </div>
                         </div>
                         <div class="input-row">
-                            <label for="flight-from">From: </label>
+                            <label for="flight-from">Từ: </label>
                             <input type="text" name="Origin" placeholder="From" id="flight-from" class="form-control mr-sm-3" onblur="hideplaces(this)" data-value="{{origin | lower}}" data-list="places_from" autocomplete="off" value="{{origin | upper}}">  <!--list="places_from"-->
                             <div id="places_from" class="places_box">
                                 <div class="each_places_from_list places__list" data-value="del" onclick="selectplace(this)">Delhi (India)</div>
@@ -45,7 +45,7 @@
                             </div>
                         </div>
                         <div class="input-row">
-                            <label for="flight_to">To: </label>
+                            <label for="flight_to">Đến: </label>
                             <input type="text" name="Destination" placeholder="To" id="flight-to" class="form-control mr-sm-3" onblur="hideplaces(this)" data-value="{{destination | lower}}" data-list="places_to" autocomplete="off" value="{{destination | upper}}">
                             <div id="places_to" class="places_box">
                                 <div class="each_places_to_list places__list" data-value="del" onclick="selectplace(this)">Delhi (India)</div>
@@ -58,23 +58,23 @@
                             </div>
                         </div>
                         <div class="input-row">
-                            <label for="depart_date">Departure Date: </label>
+                            <label for="depart_date">Ngày đi: </label>
                             <input type="date" name="DepartDate" min="{{min_date}}" max="{{max_date}}" id="depart_date" placeholder="Date" class="form-control mr-sm-2" value="{{depart_date}}">
                         </div>
                         <div class="input-row">
-                            <label for="return_date">Return Date: </label>
+                            <label for="return_date">Ngày về: </label>
                             <input type="date" name="ReturnDate" min="{{min_date}}" max="{{max_date}}" id="return_date" placeholder="Date" class="form-control mr-sm-2" value="{{return_date}}" {% if trip_type != '2' %} disabled {% endif %}>
                         </div>
                         <div class="input-row">
-                            <label for="seat_class">Class: </label>
+                            <label for="seat_class">Loại ghế: </label>
                             <select name="SeatClass" id="SeatType" class="form-control mr-sm-2 selectpicker">
-                                <option value="economy" {% if seat == 'economy' %}selected{% endif %}>Economy</option>
-                                <option value="business" {% if seat == 'business' %}selected{% endif %}>Business</option>
-                                <option value="first" {% if seat == 'first' %}selected{% endif %}>First</option>
+                                <option value="economy" {% if seat == 'economy' %}selected{% endif %}>Thường</option>
+                                <option value="business" {% if seat == 'business' %}selected{% endif %}>Thương gia</option>
+                                <option value="first" {% if seat == 'first' %}selected{% endif %}>VIP</option>
                             </select>
                         </div>
                         <div class="input-row">
-                            <button type="submit" class="btn btn-danger">Search Flight</button>
+                            <button type="submit" class="btn btn-primary">Tìm chuyến bay</button>
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section_title text-center mb_70">
-                        <h2>Popular Destination</h2>
+                        <h2>Điểm đến phổ biến</h2>
                     </div>
                 </div>
             </div>
@@ -95,7 +95,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_destination" onclick="window.location.href = 'https://en.wikipedia.org/wiki/Tourism_in_Italy'">
                         <div class="thumb">
-                            <img src="{% static 'img/destination/1.png' %}" alt="">
+                            <img src="{% static 'img/destination/1.jpg' %}" alt="">
                         </div>
                         <div class="content">
                             <a href="#">Italy</a>
@@ -105,7 +105,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_destination" onclick="window.location.href = 'https://en.wikipedia.org/wiki/Tourism_in_Brazil'">
                         <div class="thumb">
-                            <img src="{% static 'img/destination/2.png' %}" alt="">
+                            <img src="{% static 'img/destination/2.jpg' %}" alt="">
                         </div>
                         <div class="content">
                             <a href="#">Brazil</a>
@@ -115,7 +115,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_destination" onclick="window.location.href = 'https://en.wikipedia.org/wiki/Tourism_in_the_United_States'">
                         <div class="thumb">
-                            <img src="{% static 'img/destination/3.png' %}" alt="">
+                            <img src="{% static 'img/destination/3.jpg' %}" alt="">
                         </div>
                         <div class="content">
                             <a href="#">America</a>
@@ -125,7 +125,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_destination" onclick="window.location.href = 'https://en.wikipedia.org/wiki/Tourism_in_Nepal'">
                         <div class="thumb">
-                            <img src="{% static 'img/destination/4.png' %}" alt="">
+                            <img src="{% static 'img/destination/4.jpg' %}" alt="">
                         </div>
                         <div class="content">
                             <a href="#">Nepal</a>
@@ -135,7 +135,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_destination" onclick="window.location.href = 'https://en.wikipedia.org/wiki/Tourism_in_the_Maldives'">
                         <div class="thumb">
-                            <img src="{% static 'img/destination/5.png' %}" alt="">
+                            <img src="{% static 'img/destination/5.jpg' %}" alt="">
                         </div>
                         <div class="content">
                             <a href="#">Maldives</a>
@@ -145,7 +145,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_destination" onclick="window.location.href = 'https://en.wikipedia.org/wiki/Tourism_in_Indonesia'">
                         <div class="thumb">
-                            <img src="{% static 'img/destination/6.png' %}" alt="">
+                            <img src="{% static 'img/destination/6.jpg' %}" alt="">
                         </div>
                         <div class="content">
                             <a href="#">Indonesia</a>
