@@ -32,8 +32,8 @@
                         </div>
                         </div>
                         <div class="input-row">
-                            <label for="flight-from">Từ: </label>
-                            <input type="text" name="Origin" placeholder="From" id="flight-from" class="form-control mr-sm-3" onblur="hideplaces(this)" data-value="{{origin | lower}}" data-list="places_from" autocomplete="off" value="{{origin | upper}}">  <!--list="places_from"-->
+                            <label for="flight-from" class="form_label">Từ: </label>
+                            <input type="text" name="Origin" placeholder="From" id="flight-from" class="form-control" onblur="hideplaces(this)" data-value="{{origin | lower}}" data-list="places_from" autocomplete="off" value="{{origin | upper}}">  <!--list="places_from"-->
                             <div id="places_from" class="places_box">
                                 <div class="each_places_from_list places__list" data-value="del" onclick="selectplace(this)">Delhi (India)</div>
                                 <div class="each_places_from_list places__list" data-value="bom" onclick="selectplace(this)">Mumbai (India)</div>
@@ -45,8 +45,8 @@
                             </div>
                         </div>
                         <div class="input-row">
-                            <label for="flight_to">Đến: </label>
-                            <input type="text" name="Destination" placeholder="To" id="flight-to" class="form-control mr-sm-3" onblur="hideplaces(this)" data-value="{{destination | lower}}" data-list="places_to" autocomplete="off" value="{{destination | upper}}">
+                            <label for="flight_to" class="form_label">Đến: </label>
+                            <input type="text" name="Destination" placeholder="To" id="flight-to" class="form-control" onblur="hideplaces(this)" data-value="{{destination | lower}}" data-list="places_to" autocomplete="off" value="{{destination | upper}}">
                             <div id="places_to" class="places_box">
                                 <div class="each_places_to_list places__list" data-value="del" onclick="selectplace(this)">Delhi (India)</div>
                                 <div class="each_places_to_list places__list" data-value="bom" onclick="selectplace(this)">Mumbai (India)</div>
@@ -58,16 +58,16 @@
                             </div>
                         </div>
                         <div class="input-row">
-                            <label for="depart_date">Ngày đi: </label>
-                            <input type="date" name="DepartDate" min="{{min_date}}" max="{{max_date}}" id="depart_date" placeholder="Date" class="form-control mr-sm-2" value="{{depart_date}}">
+                            <label for="depart_date" class="form_label">Ngày đi: </label>
+                            <input type="date" name="DepartDate" min="{{min_date}}" max="{{max_date}}" id="depart_date" placeholder="Date" class="form-control" value="{{depart_date}}">
+                        </div>
+                        <div class="input-row" >
+                            <label for="return_date" class="form_label">Ngày về: </label>
+                            <input type="date" name="ReturnDate" min="{{min_date}}" max="{{max_date}}" id="return_date" placeholder="Date" class="form-control" value="{{return_date}}" {% if trip_type != '2' %} disabled {% endif %}>
                         </div>
                         <div class="input-row">
-                            <label for="return_date">Ngày về: </label>
-                            <input type="date" name="ReturnDate" min="{{min_date}}" max="{{max_date}}" id="return_date" placeholder="Date" class="form-control mr-sm-2" value="{{return_date}}" {% if trip_type != '2' %} disabled {% endif %}>
-                        </div>
-                        <div class="input-row">
-                            <label for="seat_class">Loại ghế: </label>
-                            <select name="SeatClass" id="SeatType" class="form-control mr-sm-2 selectpicker">
+                            <label for="seat_class" class="form_label">Loại ghế: </label>
+                            <select name="SeatClass" id="SeatType" class="form-control selectpicker">
                                 <option value="economy" {% if seat == 'economy' %}selected{% endif %}>Thường</option>
                                 <option value="business" {% if seat == 'business' %}selected{% endif %}>Thương gia</option>
                                 <option value="first" {% if seat == 'first' %}selected{% endif %}>VIP</option>

@@ -1,21 +1,30 @@
-.form-control:focus{
-    box-shadow: 0 0 0 0.03rem rgba(220,53,69,.25);
-    border-color: rgb(220,53,69);
+.form-control:focus {
+    box-shadow: 0 0 0 0.03rem rgba(220, 53, 69, .25);
+    border-color: rgb(220, 53, 69);
 }
-.btn, .btn:focus, .btn:active{
-    box-shadow: none !important;
+
+.form-control {
+    flex: 1;
+}
+
+.btn,
+.btn:focus,
+.btn:active {
     -webkit-box-shadow: none !important;
+    box-shadow: none !important;
 }
-.btn{
+
+.btn {
     color: white;
     border-radius: 999px;
     width: 95%;
 }
-.star{
+
+.star {
     color: red;
 }
 
-.user-box{
+.user-box {
     background-color: #fff;
     width: 45%;
     border-radius: 5px;
@@ -25,15 +34,15 @@
     padding: 10px 50px 10px 50px;
 }
 
-.user-box form > div{
+.user-box form>div {
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.custom-file-label{
+.custom-file-label {
     overflow: hidden;
 }
 
-.small{
+.small {
     font-size: small;
 }
