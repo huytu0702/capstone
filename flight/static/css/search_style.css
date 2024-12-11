@@ -32,14 +32,14 @@
 
 .query-data-div {
     min-height: 11vh;
-    background-color: crimson;
-    background-image: linear-gradient(135deg, crimson, #b8017b);
+    background-color: #002855;
+    background-image: linear-gradient(39deg, #002855, #005792);
     display: flex;
 }
 
 .query-data-div2 {
-    background-color: crimson;
-    background-image: linear-gradient(135deg, crimson, #b8017b);
+    background-color: #002855;
+    background-image: linear-gradient(39deg, #002855, #005792);
     display: none;
 }
 
@@ -147,8 +147,8 @@
 }*/
 .trip-modify button:hover,
 button:active {
-    background-color: rgb(255, 235, 245);
-    color: rgb(189, 4, 116);
+    background-color: rgb(253, 253, 253);
+    color: #005792;
 }
 
 .trip-modify button:focus {
@@ -413,6 +413,14 @@ button:active {
 .flight-details-btn button {
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.btn {
+    background-color: #005792;
+}
+
+.btn:hover {
+    background-color: #002855;
 }
 
 .sort-div {
