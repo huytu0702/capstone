@@ -25,7 +25,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #e12323 !important;
+    color: #FCAF1E !important;
     transform: translateY(-1px);
     transition-duration: .2s;
 }
