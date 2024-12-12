@@ -19,12 +19,17 @@ body {
 
 .navbar {
     padding: .7rem 1.2rem;
-    background-color: transparent !important; /* Đặt nền trong suốt */
-    box-shadow: none; /* Loại bỏ bóng nếu không cần */
+    background-color: transparent !important;
+    /* Đặt nền trong suốt */
+    box-shadow: none;
+    /* Loại bỏ bóng nếu không cần */
     transition: all 0.3s ease;
-    z-index: 1000; /* Đảm bảo navbar luôn ở phía trên */
-    position: fixed; /* Navbar cố định khi cuộn */
-    width: 100%; /* Đảm bảo navbar phủ toàn bộ chiều ngang */
+    z-index: 1000;
+    /* Đảm bảo navbar luôn ở phía trên */
+    position: fixed;
+    /* Navbar cố định khi cuộn */
+    width: 100%;
+    /* Đảm bảo navbar phủ toàn bộ chiều ngang */
 }
 
 .nav-link {
@@ -267,7 +272,7 @@ body {
 }
 
 .search-flight button[type="submit"]:hover {
-    background-color: #FCAF1E;
+    color: #FCAF1E;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     transform: translateY(-3px);
 }
@@ -552,12 +557,12 @@ footer .container>div {
 }
 
 /* Radio buttons row should span full width */
-.search-flight-form-data > div:first-child {
+.search-flight-form-data>div:first-child {
     grid-column: 1 / -1;
 }
 
 /* Submit button row should span full width */
-.search-flight-form-data > div:last-child {
+.search-flight-form-data>div:last-child {
     grid-column: 1 / -1;
 }
 
@@ -573,12 +578,12 @@ footer .container>div {
         grid-template-columns: 1fr;
         gap: 15px;
     }
-    
+
     .input-row {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .form_label {
         margin-bottom: 5px;
     }
