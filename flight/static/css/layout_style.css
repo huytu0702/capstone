@@ -19,21 +19,12 @@ body {
 
 .navbar {
     padding: .7rem 1.2rem;
-    background-color: transparent !important;
-    /* Đặt nền trong suốt */
-    box-shadow: none;
-    /* Loại bỏ bóng nếu không cần */
-    transition: all 0.3s ease;
-    z-index: 1000;
-    /* Đảm bảo navbar luôn ở phía trên */
-    position: fixed;
-    /* Navbar cố định khi cuộn */
-    width: 100%;
-    /* Đảm bảo navbar phủ toàn bộ chiều ngang */
+    background-color: #fff;
+    transition-duration: .2s;
 }
 
 .nav-link {
-    color: white !important;
+    color: black;
 }
 
 .nav-link:hover {
@@ -522,9 +513,9 @@ footer .container>div {
 #places_to {
     display: none;
     position: absolute;
-    left: 90px;
-    width: 200px;
-    margin-top: 2px;
+    left: 100px;
+    width: 235px;
+    margin-top: 17em;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
@@ -589,7 +580,24 @@ footer .container>div {
     }
 }
 
+@media (max-width: 992px) {
 
+    #places_from,
+    #places_to {
+        left: 98px;
+        width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #places_from,
+    #places_to {
+        top: -190px;
+        left: 0px;
+        width: 480px;
+    }
+}
 
 ::-webkit-scrollbar-track {
     background: none;
