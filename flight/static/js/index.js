@@ -143,3 +143,23 @@ function flight_search() {
         }
     }
 }
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var swiper = new Swiper('.swiper', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: true,
+            autoplay: {
+                delay: 9000, // Thời gian tự động chuyển (5 giây = 5000ms)
+                disableOnInteraction: false, // Không dừng autoplay khi người dùng tương tác
+            },
+        });
+    });
+
+
+

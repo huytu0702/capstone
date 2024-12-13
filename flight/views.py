@@ -32,6 +32,8 @@ except:
 # Create your views here.
 
 def index(request):
+    promotions = Promotion.objects.filter(start_date__lte=datetime.now().date(), end_date__gte=datetime.now().date())
+
     min_date = f"{datetime.now().date().year}-{datetime.now().date().month}-{datetime.now().date().day}"
     max_date = f"{datetime.now().date().year if (datetime.now().date().month+3)<=12 else datetime.now().date().year+1}-{(datetime.now().date().month + 3) if (datetime.now().date().month+3)<=12 else (datetime.now().date().month+3-12)}-{datetime.now().date().day}"
     if request.method == 'POST':
@@ -46,7 +48,8 @@ def index(request):
             'destination': destination,
             'depart_date': depart_date,
             'seat': seat.lower(),
-            'trip_type': trip_type
+            'trip_type': trip_type,
+            'promotions': promotions
         })
         elif(trip_type == '2'):
             return_date = request.POST.get('ReturnDate')
@@ -58,12 +61,14 @@ def index(request):
             'depart_date': depart_date,
             'seat': seat.lower(),
             'trip_type': trip_type,
-            'return_date': return_date
+            'return_date': return_date,
+            'promotions': promotions
         })
     else:
         return render(request, 'flight/index.html', {
             'min_date': min_date,
-            'max_date': max_date
+            'max_date': max_date,
+            'promotions': promotions
         })
 
 def login_view(request):
@@ -471,3 +476,5 @@ def terms_and_conditions(request):
 
 def about_us(request):
     return render(request, 'flight/about.html')
+
+
