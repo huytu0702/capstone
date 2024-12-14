@@ -161,5 +161,41 @@ function flight_search() {
         });
     });
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Mảng chứa đường dẫn các ảnh
+    const backgrounds = [
+        'maldives.jpg',
+        'santorini.jpg',
+        'paris.jpg'
+    ];
+    let currentIndex = 0;
+
+    // Hàm thay đổi background
+    function changeBackground(direction) {
+        if (direction === 'next') {
+            currentIndex = (currentIndex + 1) % backgrounds.length;
+        } else {
+            currentIndex = (currentIndex - 1 + backgrounds.length) % backgrounds.length;
+        }
+        
+        const bannerElement = document.querySelector('.banner-background');
+        bannerElement.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../static/img/${backgrounds[currentIndex]}')`;
+    }
+
+    // Thêm event listeners cho các nút
+    document.querySelector('.background-nav.prev').addEventListener('click', () => {
+        changeBackground('prev');
+    });
+
+    document.querySelector('.background-nav.next').addEventListener('click', () => {
+        changeBackground('next');
+    });
+
+    // Auto change background every 8 seconds
+    setInterval(() => {
+        changeBackground('next');
+    }, 8000);
+});
+
 
 

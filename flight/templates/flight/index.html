@@ -27,6 +27,12 @@
 
 {% block body %}
     <section class="section first-section banner-background">
+        <button class="background-nav prev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="background-nav next">
+            <i class="fas fa-chevron-right"></i>
+        </button>
         <nav class="navbar navbar-expand-lg navbar-light transparent-navbar">
             <a class="navbar-brand" href="{% url 'index' %}">
                 <img src="{% static 'img/icon_logo.png' %}" height="34" alt="">

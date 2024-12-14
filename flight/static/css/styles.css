@@ -1,7 +1,35 @@
 .banner-background {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/maldives.jpg');
     background-size: cover;
     background-position: center;
+    position: relative;
+    transition: background-image 0.5s ease-in-out;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/maldives.jpg');
+}
+
+@keyframes changeBackground {
+    0%, 33% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/maldives.jpg');
+    }
+    34%, 66% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/santorini.jpg');
+    }
+    67%, 100% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/paris.jpg');
+    }
+}
+
+/* Thêm hiệu ứng fade */
+.banner-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 .form_label {
@@ -22,41 +50,29 @@ select.form-control {
 }
 
 .promotions {
-    max-width: 800px;
-    /* Độ rộng tối đa */
+    max-width: 700px; /* Giảm max-width tổng thể */
     margin: 20px auto;
-    /* Căn giữa khối */
-    text-align: center;
+    padding: 0 15px;
 }
 
 .promotions h2 {
-    font-size: 24px;
+    text-align: center;
     color: white;
-    /* Màu tiêu đề */
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-.swiper-container {
-    width: 100%;
-    max-width: 800px;
-    /* Độ rộng tối đa */
-    margin: auto;
-}
-
-.swiper {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .swiper-slide {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.1);
+    min-height: 250px; /* Giảm chiều cao */
+    width: 250px; /* Giảm chiều rộng */
+    padding: 20px 20px; /* Giảm padding */
+    background: rgba(255, 255, 255, 0.15);
     background-image: 
         linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
         linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
@@ -64,104 +80,118 @@ select.form-control {
         linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.1) 75%);
     background-size: 20px 20px;
     background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-    position: relative;
-    overflow: hidden;
-    backdrop-filter: blur(10px); /* Hiệu ứng kính mờ */
-    border-radius: 20px;
+    border-radius: 15px; /* Giảm border radius */
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    transition: transform 0.3s ease;
+    backdrop-filter: blur(10px);
+    margin: 10px auto;
 }
 
-.swiper-slide:hover {
-    transform: translateY(-5px);
+.promotion-icon {
+    width: 60px; /* Giảm kích thước icon */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.promotion-icon i {
+    font-size: 30px; /* Giảm kích thước icon */
+    color: rgba(255, 255, 255, 0.9);
+    animation: float 3s ease-in-out infinite;
 }
 
 .swiper-slide h3 {
-    font-size: 22px;
+    font-size: 18px; /* Giảm kích thước font */
     color: #ffffff;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-weight: 600;
+    text-align: center;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .swiper-slide p {
-    font-size: 16px;
+    font-size: 14px; /* Giảm kích thước font */
     color: #ffffff;
-    line-height: 1.6;
-    margin-bottom: 10px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    text-align: center;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.swiper-pagination {
-    position: relative;
-    margin-top: 20px;
-}
-
-.swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    background-color: rgba(255, 255, 255, 0.5) !important;
-    opacity: 0.7;
-    transition: all 0.3s ease;
-}
-
-.swiper-pagination-bullet-active {
-    background-color: #ffffff !important;
-    width: 25px;
-    border-radius: 5px;
-}
-
-.promotion-icon {
-    font-size: 40px;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 20px;
-    animation: float 3s ease-in-out infinite;
 }
 
 .promotion-date {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 14px;
+    justify-content: center;
+    gap: 6px;
+    font-size: 12px; /* Giảm kích thước font */
     color: rgba(255, 255, 255, 0.8);
-    margin-top: 10px;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
 }
 
-.promotion-date i {
-    font-size: 16px;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .swiper-slide {
+        width: 220px; /* Giảm thêm với màn hình nhỏ */
+        min-height: 220px;
+        padding: 20px 15px;
+    }
+
+    .promotion-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .promotion-icon i {
+        font-size: 25px;
+    }
+
+    .swiper-slide h3 {
+        font-size: 16px;
+    }
+
+    .swiper-slide p {
+        font-size: 13px;
+    }
 }
 
-@keyframes float {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-.swiper-slide::before {
-    content: '';
+/* Thêm style cho nút điều hướng */
+.background-nav {
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
-    animation: rotate 15s linear infinite;
-    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 100;
 }
 
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.background-nav:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.background-nav.prev {
+    left: 20px;
+}
+
+.background-nav.next {
+    right: 20px;
+}
+
+.background-nav i {
+    color: white;
+    font-size: 20px;
 }
