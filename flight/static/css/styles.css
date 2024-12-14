@@ -55,29 +55,113 @@ select.form-control {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    /* Nền trắng */
-    border-radius: 15px;
-    /* Bo góc mềm mại */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Hiệu ứng đổ bóng */
-    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    background-image: 
+        linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.1) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.1) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px); /* Hiệu ứng kính mờ */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.swiper-slide:hover {
+    transform: translateY(-5px);
 }
 
 .swiper-slide h3 {
-    font-size: 18px;
-    color: #FCAF1E;
-    /* Màu xanh tiêu đề khuyến mãi */
-    margin-bottom: 10px;
-    font-weight: bold;
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .swiper-slide p {
-    font-size: 14px;
-    color: #FCAF1E;
-    /* Màu xám cho nội dung */
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-pagination {
+    position: relative;
+    margin-top: 20px;
 }
 
 .swiper-pagination-bullet {
-    background-color: #00063F !important;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #ffffff !important;
+    width: 25px;
+    border-radius: 5px;
+}
+
+.promotion-icon {
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.promotion-date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 10px;
+}
+
+.promotion-date i {
+    font-size: 16px;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.swiper-slide::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+    animation: rotate 15s linear infinite;
+    z-index: -1;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
