@@ -94,13 +94,9 @@
           </nav>
       
           <div class="swiper promotions">
-            <h2>Thông tin</h2>
             <div class="swiper-wrapper promotion-slider">
                 {% for promotion in promotions %}
                     <div class="swiper-slide promotion-slide">
-                        <div class="promotion-icon">
-                            <i class="fas fa-gift"></i>
-                        </div>
                         <h3>{{ promotion.title }}</h3>
                         <p>{{ promotion.description }}</p>
                         <p class="promotion-date">
