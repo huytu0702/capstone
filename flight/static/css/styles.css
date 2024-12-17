@@ -2,8 +2,30 @@
     background-size: cover;
     background-position: center;
     position: relative;
-    transition: background-image 0.5s ease-in-out;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/maldives.jpg');
+    transition: background-image 1s ease-in-out;
+}
+
+.banner-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    /* Bắt đầu với độ mờ 0 */
+    transition: opacity 1s ease-in-out;
+    /* Thay đổi độ mờ trong 1 giây */
+    z-index: 1;
+    /* Đặt z-index để nó nằm trên cùng */
+}
+
+.banner-background.active::before {
+    opacity: 1;
+    /* Đặt độ mờ thành 1 khi có class active */
 }
 
 @keyframes changeBackground {
