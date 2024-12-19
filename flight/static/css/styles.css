@@ -7,13 +7,19 @@
 }
 
 @keyframes changeBackground {
-    0%, 33% {
+
+    0%,
+    33% {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/maldives.jpg');
     }
-    34%, 66% {
+
+    34%,
+    66% {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/santorini.jpg');
     }
-    67%, 100% {
+
+    67%,
+    100% {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/paris.jpg');
     }
 }
@@ -50,7 +56,8 @@ select.form-control {
 }
 
 .promotions {
-    max-width: 700px; /* Giảm max-width tổng thể */
+    max-width: 700px;
+    /* Giảm max-width tổng thể */
     margin: 20px auto;
     padding: 0 15px;
 }
@@ -58,7 +65,7 @@ select.form-control {
 .promotions h2 {
     text-align: center;
     color: white;
-    font-size: 28px;
+    font-size: 38px;
     margin-bottom: 30px;
     font-weight: 600;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -69,18 +76,17 @@ select.form-control {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: 250px; /* Giảm chiều cao */
-    width: 250px; /* Giảm chiều rộng */
-    padding: 20px 20px; /* Giảm padding */
+    min-height: 250px;
+    /* Giảm chiều cao */
+    width: 250px;
+    /* Giảm chiều rộng */
+    padding: 20px 20px;
+    /* Giảm padding */
     background: rgba(255, 255, 255, 0.15);
-    background-image: 
-        linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
-        linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.1) 75%),
-        linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.1) 75%);
     background-size: 20px 20px;
     background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-    border-radius: 15px; /* Giảm border radius */
+    border-radius: 15px;
+    /* Giảm border radius */
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
@@ -88,7 +94,8 @@ select.form-control {
 }
 
 .promotion-icon {
-    width: 60px; /* Giảm kích thước icon */
+    width: 60px;
+    /* Giảm kích thước icon */
     height: 60px;
     display: flex;
     align-items: center;
@@ -99,13 +106,15 @@ select.form-control {
 }
 
 .promotion-icon i {
-    font-size: 30px; /* Giảm kích thước icon */
+    font-size: 30px;
+    /* Giảm kích thước icon */
     color: rgba(255, 255, 255, 0.9);
     animation: float 3s ease-in-out infinite;
 }
 
 .swiper-slide h3 {
-    font-size: 18px; /* Giảm kích thước font */
+    font-size: 28px;
+    /* Giảm kích thước font */
     color: #ffffff;
     margin-bottom: 12px;
     font-weight: 600;
@@ -114,7 +123,8 @@ select.form-control {
 }
 
 .swiper-slide p {
-    font-size: 14px; /* Giảm kích thước font */
+    font-size: 14px;
+    /* Giảm kích thước font */
     color: #ffffff;
     line-height: 1.5;
     margin-bottom: 12px;
@@ -127,7 +137,8 @@ select.form-control {
     align-items: center;
     justify-content: center;
     gap: 6px;
-    font-size: 12px; /* Giảm kích thước font */
+    font-size: 12px;
+    /* Giảm kích thước font */
     color: rgba(255, 255, 255, 0.8);
     margin-top: auto;
     padding-top: 12px;
@@ -138,7 +149,8 @@ select.form-control {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .swiper-slide {
-        width: 220px; /* Giảm thêm với màn hình nhỏ */
+        width: 220px;
+        /* Giảm thêm với màn hình nhỏ */
         min-height: 220px;
         padding: 20px 15px;
     }

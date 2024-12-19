@@ -80,6 +80,11 @@ label {
 
 .month-div {
     margin-right: 1em;
+    width: 29%;
+}
+
+.yeae-div {
+    width: 25%;
 }
 
 .expiry-cvv>.row {
