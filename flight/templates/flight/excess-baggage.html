@@ -1,0 +1,95 @@
+{% extends 'flight/layout.html' %} {% load static %} {% block head %}
+<title>baggage-allowance | FlSight</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/excess.css' %}" />
+{% endblock head %} {% block body %}
+<div class="container2">
+  <h1>Hành lý tính cước</h1>
+  <p>
+    Hành khách có thể nâng trọng lượng hành lý ký gửi của mình theo các gói đa
+    dạng và linh hoạt. Tận hưởng <strong>giá ưu đãi lên tới 70%</strong> khi mua
+    thêm hành lý ký gửi qua các kênh chính thức của Q Airways trước giờ khởi
+    hành. Hành khách có nhu cầu vui lòng tham khảo bảng phí dưới đây.
+  </p>
+
+  <div class="notice">
+    <p>
+      Trường hợp hành khách đã mua hành lý trả trước lần đầu trước đó và muốn
+      mua bổ sung, vui lòng liên hệ Phòng vé hoặc Tổng đài chăm sóc khách hàng
+      <strong>+84 1900 1111</strong> của Q Airways.
+    </p>
+  </div>
+
+  <h2>Chặng bay nội địa Việt Nam</h2>
+  <h3>Mua trước giờ bay tối thiểu 03 giờ</h3>
+  <p><em>Áp dụng cho các vé xuất/đổi từ ngày 20/5/2024</em></p>
+  <ul>
+    <li>
+      Mức hành lý mua thêm lần đầu: tối đa 60kg (áp dụng cho cả hạng Business và
+      Economy)
+    </li>
+    <li>
+      Trường hợp cần mua thêm khách liên hệ Phòng vé hoặc bộ phận Chăm sóc khách
+      hàng để đặt thêm gói bổ sung
+    </li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan="7">Cả năm (trừ giai đoạn cao điểm Tết và hè)</th>
+      </tr>
+      <tr>
+        <th>Gói hành lý</th>
+        <th>10kg</th>
+        <th>20kg</th>
+        <th>30kg</th>
+        <th>40kg</th>
+        <th>50kg</th>
+        <th>60kg</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Giá VNĐ</td>
+        <td>130.000</td>
+        <td>260.000</td>
+        <td>390.000</td>
+        <td>520.000</td>
+        <td>650.000</td>
+        <td>780.000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Mua tại sân</h3>
+  <p>
+    Hành lý ký gửi mua thêm tại sân được bán theo các gói. Trường hợp hành khách
+    có số cân hành lý ký gửi mua thêm nằm trong khoảng các gói thì sẽ được làm
+    tròn lên tới mức giá gói gần nhất.
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Gói hành lý</th>
+        <th>5kg</th>
+        <th>10kg</th>
+        <th>15kg</th>
+        <th>20kg</th>
+        <th>25kg</th>
+        <th>30kg</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Giá VNĐ</td>
+        <td>150.000</td>
+        <td>300.000</td>
+        <td>400.000</td>
+        <td>550.000</td>
+        <td>650.000</td>
+        <td>750.000</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{% endblock%}

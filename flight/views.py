@@ -477,4 +477,50 @@ def terms_and_conditions(request):
 def about_us(request):
     return render(request, 'flight/about.html')
 
+def travel_info(request):
+    return render(request, 'flight/travel-info.html')
 
+def baggage_info(request):
+    return render(request, 'flight/baggage-info.html')
+
+def carry_on_baggage(request):
+    return render(request, 'flight/carry-on-baggage.html')
+
+def baggage_allowance(request):
+    return render(request, 'flight/baggage-allowance.html')
+
+def excess_baggage(request):
+    return render(request, 'flight/excess-baggage.html')
+
+def special_baggage(request):
+    return render(request, 'flight/special-baggage.html')
+
+def check_in(request):
+    return render(request, 'flight/check-in.html')
+
+def special_services(request):
+    return render(request, 'flight/special-services.html')
+
+def travel_documents(request):
+    return render(request, 'flight/travel-documents.html')
+
+def travelling_with_kids(request):
+    return render(request, 'flight/travelling-with-kids.html')
+
+def pregnant_passengers(request):
+    return render(request, 'flight/pregnant-passengers.html')
+
+def disabled_passengers(request):
+    return render(request, 'flight/disabled-passengers.html')
+
+def special_meals(request):
+    return render(request, 'flight/special-meals.html')
+
+def health_status(request):
+    return render(request, 'flight/health-status.html')
+
+def identification_documents_visa(request):
+    return render(request, 'flight/identification-documents-visa.html')
+
+def entry_exit_regulations(request):
+    return render(request, 'flight/entry-exit-regulations.html')

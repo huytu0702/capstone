@@ -1,0 +1,48 @@
+{% extends 'flight/layout.html' %} {% load static %} {% block head %}
+<title>Travel-info | FlSight</title>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/travel-info.css' %}"
+/>
+{% endblock head %} {% block body %}
+<div class="banner2">
+  <img class="banner_mb" src="{% static 'img/Banner_2.png' %}"
+</div>
+<div class="container2">
+  <h1>Thông tin hành trình</h1>
+  <div class="grid">
+    <a href="{% url 'baggage_info' %}" class="card">
+      <img src="{% static 'img/baggage.jpg' %}" alt="Hành lý" />
+      <div class="overlay">
+        <span>Hành lý</span>
+        <span class="arrow">></span>
+      </div>
+    </a>
+    <a href="{% url 'check_in' %}" class="card">
+      <img src="{% static 'img/checkin.jpg' %}" alt="Làm thủ tục" />
+      <div class="overlay">
+        <span>Làm thủ tục</span>
+        <span class="arrow">></span>
+      </div>
+    </a>
+    <a href="{% url 'special_services' %}" class="card">
+      <img
+        src="{% static 'img/special-services.webp' %}"
+        alt="Dịch vụ đặc biệt"
+      />
+      <div class="overlay">
+        <span>Dịch vụ đặc biệt</span>
+        <span class="arrow">></span>
+      </div>
+    </a>
+    <a href="{% url 'travel_documents' %}" class="card">
+      <img src="{% static 'img/documents.jpg' %}" alt="Yêu cầu giấy tờ" />
+      <div class="overlay">
+        <span>Yêu cầu giấy tờ</span>
+        <span class="arrow">></span>
+      </div>
+    </a>
+  </div>
+</div>
+{% endblock%}

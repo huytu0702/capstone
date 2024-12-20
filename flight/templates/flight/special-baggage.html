@@ -1,0 +1,75 @@
+{% extends 'flight/layout.html' %} {% load static %} {% block head %}
+<title>baggage-allowance | FlSight</title>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/special-baggage.css' %}"
+/>
+<script
+  type="text/javascript"
+  src="{% static 'js/special-baggage.js' %}"
+></script>
+{% endblock head %} {% block body %}
+<div class="container2">
+  <h1>Hành lý đặc biệt</h1>
+  <p>
+    Trong một số trường hợp, Bamboo Airways cho phép hành khách mang theo vật
+    phẩm khi đáp ứng các quy định đặc biệt. Hành khách vui lòng tham khảo thông
+    tin dưới đây để có những chuẩn bị tốt nhất cho chuyến đi sắp tới.
+  </p>
+
+  <div class="accordion">
+    <!-- Mục 1 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        HÀNH LÝ CỒNG KỀNH, DỤNG CỤ THỂ THAO & XE ĐẠP
+      </button>
+      <div class="accordion-content">
+        <p>
+          Bamboo Airways cung cấp dịch vụ vận chuyển hành lý cồng kềnh, xe đạp
+          và các loại dụng cụ thể thao như bộ dụng cụ trượt tuyết, ván lướt...
+        </p>
+        <h3>Đặt dịch vụ</h3>
+        <p>
+          Hành khách có nhu cầu vận chuyển hành lý cồng kềnh, dụng cụ thể thao
+          hoặc xe đạp vui lòng liên hệ với các phòng vé của Bamboo Airways...
+        </p>
+      </div>
+    </div>
+
+    <!-- Mục 2 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        HÀNH LÝ CHIẾM CHỖ TRÊN KHOANG KHÁCH
+      </button>
+      <div class="accordion-content">
+        <p>Thông tin chi tiết về hành lý chiếm chỗ trên khoang khách...</p>
+      </div>
+    </div>
+
+    <!-- Mục 3 -->
+    <div class="accordion-item">
+      <button class="accordion-header">BỘ DỤNG CỤ CHƠI GOLF</button>
+      <div class="accordion-content">
+        <p>Thông tin chi tiết về bộ dụng cụ chơi golf...</p>
+      </div>
+    </div>
+
+    <!-- Các mục khác -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        XE ĐẨY TRẺ EM, XE LĂN CỦA HÀNH KHÁCH
+      </button>
+      <div class="accordion-content">
+        <p>Thông tin chi tiết về xe đẩy trẻ em và xe lăn của hành khách...</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="contact">
+    For more information, please contact hotline:
+    <strong>+84 1900 1166</strong> or go directly to the ticket offices, agents
+    of Bamboo Airways for support and answers.
+  </p>
+</div>
+{% endblock%}

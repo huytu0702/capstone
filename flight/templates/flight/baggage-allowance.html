@@ -1,0 +1,78 @@
+{% extends 'flight/layout.html' %} {% load static %} {% block head %}
+<title>baggage-allowance | FlSight</title>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/baggage-allowance.css' %}"
+/>
+{% endblock head %} {% block body %}
+<div class="container2">
+  <h1>Hành lý miễn cước</h1>
+  <p>
+    Hành lý miễn cước là trọng lượng hành lý mà hành khách được quyền mang theo
+    và không phải trả phí. Trọng lượng hành lý miễn cước cho từng hạng vé của Q
+    Airways được quy định như sau:
+  </p>
+  <ul>
+    <li>
+      Mỗi kiện hành lý ký gửi có trọng lượng tối đa là 32kg (70lb) và/hoặc tổng
+      kích thước ba chiều tối đa (dài + rộng + cao) không được vượt quá 203 cm.
+      Nếu mỗi kiện hành lý vượt quá tiêu chuẩn nêu trên, hành khách sẽ được yêu
+      cầu đóng gói lại hành lý hoặc được yêu cầu gửi theo đường hàng hóa.
+    </li>
+    <li>
+      Mỗi hành khách trên một chuyến bay được ký gửi hành lý miễn cước không quá
+      03 kiện đối với hạng vé Business và 02 kiện đối với hạng vé Economy.
+    </li>
+    <li>
+      Trường hợp hành lý vượt quá quy định, hành khách phải thực hiện việc đóng
+      lại hành lý. Q Airways chỉ chấp nhận vận chuyển hành lý ký gửi đúng quy
+      định.
+    </li>
+  </ul>
+
+  <h2>Chặng bay nội địa Việt Nam</h2>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Q Economy</th>
+          <th>Q Business</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="ticket">
+              <p>Economy Saver Max</p>
+              <span>Trả phí</span>
+            </div>
+            <div class="ticket">
+              <p>Hot Deal</p>
+              <span>20kg</span>
+            </div>
+            <div class="ticket">
+              <p>Economy Smart</p>
+              <span>Trả phí</span>
+            </div>
+            <div class="ticket">
+              <p>Economy Flex</p>
+              <span>20kg</span>
+            </div>
+          </td>
+          <td>
+            <div class="ticket">
+              <p>Business Smart</p>
+              <span>30kg</span>
+            </div>
+            <div class="ticket">
+              <p>Business Flex</p>
+              <span>40kg</span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock%}

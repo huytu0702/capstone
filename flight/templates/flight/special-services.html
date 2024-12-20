@@ -1,0 +1,42 @@
+{% extends 'flight/layout.html' %} {% load static %} {% block head %}
+<title>Travel-info | FlSight</title>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/travel-info.css' %}"
+/>
+{% endblock head %} {% block body %}
+<div class="container2">
+  <h1>Dịch vụ đặc biệt</h1>
+  <div class="grid">
+    <a href="{% url 'travelling_with_kids' %}" class="card">
+      <img src="{% static 'img/dvte.jpg' %}" alt="Hành lý" />
+      <div class="overlay">
+        <span>Dịch vụ cho trẻ em</span>
+        <span class="arrow">></span>
+      </div>
+    </a>
+    <a href="{% url 'pregnant_passengers' %}" class="card">
+      <img src="{% static 'img/pnmt.png' %}" alt="Làm thủ tục" />
+      <div class="overlay">
+        <span>Phụ nữ mang thai</span>
+        <span class="arrow">></span>
+      </div>
+    </a>
+    <a href="{% url 'disabled_passengers' %}" class="card">
+      <img src="{% static 'img/nkt.jpg' %}" alt="Dịch vụ đặc biệt" />
+      <div class="overlay">
+        <span>Hỗ trợ người khuyết tật</span>
+        <span class="arrow">></span>
+      </div>
+    </a>
+    <a href="{% url 'special_meals' %}" class="card">
+      <img src="{% static 'img/sadb.jpg' %}" alt="Yêu cầu giấy tờ" />
+      <div class="overlay">
+        <span>Suất ăn đặc biệt</span>
+        <span class="arrow">></span>
+      </div>
+    </a>
+  </div>
+</div>
+{% endblock%}

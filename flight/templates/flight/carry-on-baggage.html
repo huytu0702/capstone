@@ -1,0 +1,55 @@
+{% extends 'flight/layout.html' %} {% load static %} {% block head %}
+<title>carryonbaggage | FlSight</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/baggage.css' %}" />
+{% endblock head %} {% block body %}
+<div class="container2">
+  <h1>Hành lý xách tay</h1>
+  <p>
+    Để đảm bảo sự an toàn và thoải mái cho hành khách, Bamboo Airways quy định
+    về trọng lượng và kích thước hành lý xách tay như sau:
+  </p>
+  <div class="image-container">
+    <img src="cabin-baggage.png" alt="Hành lý của bạn có vừa cabin không?" />
+  </div>
+  <p>
+    Mỗi hành khách (ngoại trừ em bé dưới 2 tuổi) được phép mang theo tiêu chuẩn
+    hành lý xách tay miễn cước trên chuyến bay của Bamboo Airways như sau:
+  </p>
+  <ul>
+    <li>
+      <strong>Đối với hạng Economy:</strong> 01 kiện chính và/hoặc 01 túi
+      xách/vật dụng nhỏ*, tổng trọng lượng tối đa 07kg, kích thước kiện chính
+      không quá 115cm (56 x 36 x 23cm)
+    </li>
+    <li>
+      <strong>Đối với hạng Business:</strong> 02 kiện chính và/hoặc 01 túi
+      xách/vật dụng nhỏ*, tổng trọng lượng tối đa 14kg, mỗi kiện chính có trọng
+      lượng tối đa 07kg
+    </li>
+  </ul>
+  <p>
+    *Túi/vật dụng cá nhân nhỏ (gồm MỘT trong những túi/vật dụng sau) – không cần
+    đăng ký hành lý xách tay:
+  </p>
+  <ul>
+    <li>
+      Một túi xách (nam/nữ) hoặc sách, tạp chí, máy ảnh, túi mua hàng tại sân
+      bay… có kích thước không quá 30cm x 20cm x 10cm hoặc
+    </li>
+    <li>Một chiếc khăn mỏng/một cái khăn choàng/một áo khoác; hoặc</li>
+    <li>
+      Một chiếc ô/gậy đi bộ (ngoại trừ loại có đầu nhọn hoặc kim loại ở đầu);
+      hoặc
+    </li>
+    <li>Một quyển sách hoặc một tờ báo/tạp chí; hoặc</li>
+    <li>
+      Một thiết bị trợ giúp dành cho hành khách khuyết tật (nạng hoặc gậy chống
+      hoặc xe lăn gấp lại được và để vừa ngăn đựng hành lý) hoặc một thiết bị hỗ
+      trợ y tế; hoặc
+    </li>
+    <li>
+      Một túi đựng máy tính xách tay có kích thước tối đa là 40cm x 30cm x 10cm
+    </li>
+  </ul>
+</div>
+{% endblock%}

@@ -1,0 +1,100 @@
+.container2 {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+h1,
+h2 {
+    color: #003f8a;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Bảng */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead th {
+    background-color: #003f8a;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+tbody td {
+    padding: 20px;
+    text-align: center;
+    vertical-align: top;
+    font-size: 16px;
+    color: #333333;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+    /* Dòng chẵn màu xám nhạt */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+    /* Dòng lẻ màu trắng */
+}
+
+/* Vé trong bảng */
+.ticket {
+    background-color: #e8eef7;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ticket p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #003f8a;
+    margin: 0 0 5px;
+}
+
+.ticket span {
+    font-size: 14px;
+    color: #555555;
+}
+
+/* Đường viền giữa các ô */
+tbody td,
+thead th {
+    border: 1px solid #ddd;
+}

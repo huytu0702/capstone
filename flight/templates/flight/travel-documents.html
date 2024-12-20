@@ -1,0 +1,35 @@
+{% extends 'flight/layout.html' %} {% load static %} {% block head %}
+<title>Travel-info | FlSight</title>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/travel-info.css' %}"
+/>
+{% endblock head %} {% block body %}
+<div class="container2">
+  <h1>Yêu cầu giấy tờ</h1>
+  <div class="grid">
+    <a href="{% url 'health_status' %}" class="card">
+      <img src="{% static 'img/sk.jpg' %}" alt="Hành lý" />
+      <div class="overlay">
+        <span>Yêu cầu xác nhận sức khỏe</span>
+        <span class="arrow">></span>
+      </div>
+    </a>
+    <a href="{% url 'identification_documents_visa' %}" class="card">
+      <img src="{% static 'img/tt.jpg' %}" alt="Làm thủ tục" />
+      <div class="overlay">
+        <span>Giấy tờ tùy thân và thị thực</span>
+        <span class="arrow">></span>
+      </div>
+    </a>
+    <a href="{% url 'entry_exit_regulations' %}" class="card">
+      <img src="{% static 'img/xnc.webp' %}" alt="Dịch vụ đặc biệt" />
+      <div class="overlay">
+        <span>Quy định xuất nhập cảnh</span>
+        <span class="arrow">></span>
+      </div>
+    </a>
+  </div>
+</div>
+{% endblock%}

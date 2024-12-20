@@ -1,0 +1,42 @@
+{% extends 'flight/layout.html' %} {% load static %} {% block head %}
+<title>baggage-info| FlSight</title>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/travel-info.css' %}"
+/>
+{% endblock head %} {% block body %}
+<div class="container2">
+  <h1>Hành lý</h1>
+  <div class="grid">
+    <a href="{% url 'carry_on_baggage' %}" class="card">
+      <img src="{% static 'img/hlxt.jpg' %}" alt="Hành lý" />
+      <div class="overlay">
+        <span>Hành lý xách tay</span>
+        <span class="arrow">></span>
+      </div>
+    </a>
+    <a href="{% url 'baggage_allowance' %}" class="card">
+      <img src="{% static 'img/hlmc.jpg' %}" alt="Làm thủ tục" />
+      <div class="overlay">
+        <span>Hành lý miễn cước</span>
+        <span class="arrow">></span>
+      </div>
+    </a>
+    <a href="{% url 'excess_baggage' %}" class="card">
+      <img src="{% static 'img/hltc.png' %}" alt="Dịch vụ đặc biệt" />
+      <div class="overlay">
+        <span>Hành lý tính cước</span>
+        <span class="arrow">></span>
+      </div>
+    </a>
+    <a href="{% url 'special_baggage' %}" class="card">
+      <img src="{% static 'img/hldb.webp' %}" alt="Yêu cầu giấy tờ" />
+      <div class="overlay">
+        <span>Hành lý đặc biệt</span>
+        <span class="arrow">></span>
+      </div>
+    </a>
+  </div>
+</div>
+{% endblock%}

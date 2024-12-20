@@ -1,0 +1,74 @@
+.container2 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    color: #003f8a;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Accordion */
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #e8eef7;
+    color: #003f8a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #d6e4f2;
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px;
+    border: 1px solid #e8eef7;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    background-color: #f9f9f9;
+}
+
+.accordion-content p {
+    margin: 0 0 10px;
+}
+
+.accordion-content h3 {
+    margin-top: 10px;
+    color: #003f8a;
+}
+
+/* Hiển thị nội dung khi mở */
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+/* Liên hệ */
+.contact {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}

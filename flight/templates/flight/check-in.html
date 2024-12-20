@@ -1,0 +1,121 @@
+{% extends 'flight/layout.html' %} {% load static %} {% block head %}
+<title>Check-in | FlSight</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/check-in.css' %}" />
+<script type="text/javascript" src="{% static 'js/check-in.js' %}"></script>
+{% endblock head %} {% block body %}
+<div class="container2">
+  <h1>Làm thủ tục tại sân bay</h1>
+  <p>
+    Để hành trình với Q Airways được bắt đầu suôn sẻ và thuận lợi, Quý
+    khách vui lòng lưu ý một số thông tin dưới đây khi làm thủ tục tại sân bay:
+  </p>
+  <h2>Hướng dẫn làm thủ tục tại sân bay</h2>
+  <div class="steps">
+    <!-- Danh sách các bước -->
+    <div class="step-list">
+      <ul>
+        <li data-step="1" class="active">Bước 1</li>
+        <li data-step="2">Bước 2</li>
+        <li data-step="3">Bước 3</li>
+        <li data-step="4">Bước 4</li>
+        <li data-step="5">Bước 5</li>
+      </ul>
+    </div>
+    <!-- Nội dung tương ứng với từng bước -->
+    <div class="step-content">
+      <div class="content" data-content="1">
+        <h3>Tới quầy làm thủ tục ở sân bay</h3>
+        <p>
+          Tại sân bay, quý khách vui lòng theo dõi bảng điện tử hiển thị thông
+          tin các chuyến bay tại nhà ga hành khách để biết khu vực quầy làm thủ
+          tục chuyến bay của mình. Mỗi hãng hàng không sẽ có khu vực quầy thủ
+          tục khác nhau. Khi tới quầy, nhân viên phục vụ mặt đất sẽ kiểm tra mã
+          đặt chỗ/ vé máy bay và giấy tờ tùy thân của hành khách cùng người đi
+          kèm. Hành lý kí gửi mang theo sẽ được đặt lên băng truyền để cân và
+          vận chuyển riêng.
+        </p>
+      </div>
+      <div class="content" data-content="2">
+        <h3>Nhận thẻ lên máy bay (Boarding pass)</h3>
+        <p>
+          Sau khi hoàn tất kiểm tra thông tin đặt chỗ và giấy tờ tùy thân của
+          hành khách, nhân viên phục vụ sẽ gửi lại các giấy tờ liên quan kèm thẻ
+          lên tàu bay và hướng dẫn hành khách số cổng lên tàu (gate).
+        </p>
+      </div>
+      <div class="content" data-content="3">
+        <h3>Di chuyển tới cổng an ninh của sân bay</h3>
+        <p>
+          Sau khi nhận thẻ lên máy bay, quý khách di chuyển tới cổng an ninh.
+          Tại đây, nhân viên an ninh sân bay sẽ yêu cầu quý khách cởi bỏ các phụ
+          kiện như đồng hồ, giày dép, mũ, thắt lưng, túi xách… để vào 1 chiếc
+          khay và bước qua máy soi chiếu an ninh.
+        </p>
+      </div>
+      <div class="content" data-content="4">
+        <h3>Di chuyển tới cửa ra máy bay</h3>
+        <p>
+          <p>Sau khi đã hoàn thành các thủ tục trước chuyến bay, kiểm tra an ninh,
+          hải quan, xuất nhập cảnh, hành khách cần có mặt tại cửa ra máy bay từ
+          30 đến 40 phút trước giờ khởi hành của chuyến bay. </p>
+          <p>Trong thời gian chờ lên máy bay, hành khách đi hạng Thương gia hoặc đặt mua Voucher sử
+          dụng phòng chờ Thương gia có thể sử dụng dịch vụ tại Phòng chờ Thương
+          gia của Q Airways. </p>
+          <p>Tại thời điểm 15 phút trước giờ khởi hành của
+          chuyến bay, nếu hành khách không có mặt tại cửa ra máy bay, Q
+          Airways sẽ làm các thủ tục liên quan đến việc không thực hiện chuyến
+          bay của hành khách.</p>
+        </p>
+      </div>
+      <div class="content" data-content="5">
+        <h3>Bước 5</h3>
+        <p>
+          Sau khi lên tàu bay, quý khách hãy nhìn số ghế (seat) được ghi trên vé
+          máy bay để di chuyển và tìm đúng vị trí ngồi của mình. Thông thường,
+          ghế sẽ được ghi theo hàng chữ và cột số để bạn dễ tìm kiếm nhất. Đừng
+          quên cất vali, balo hoặc đồ đạc trên khoang hành lý phía trên đầu sau
+          đó đóng cửa khoang lại và ngồi xuống, thắt dây an toàn, chờ máy bay
+          cất cánh.
+        </p>
+      </div>
+    </div>
+  </div>
+<br>
+<br>
+  <h2>Thời gian làm thủ tục tại sân bay</h2>
+    <p>
+      Với mong muốn cung cấp cho khách hàng sự thuận tiện và thoải mái nhất từ khi làm thủ tục cho đến khi hoàn thành chuyến bay, Bamboo Airways đem đến những tiện ích của các dịch vụ làm thủ tục như sau:
+    </p>
+    <div class="accordion">
+      <div class="accordion-header">Thời gian mở, đóng quầy của các hình thức làm thủ tục</div>
+      <div class="accordion-content">
+        <table>
+          <thead>
+            <tr>
+              <th>Hình thức làm thủ tục</th>
+              <th>Thời gian mở chuyến bay</th>
+              <th>Thời gian đóng chuyến so với giờ khởi hành dự kiến</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Làm thủ tục tại quầy Kiosk</td>
+              <td>Trong vòng 24 giờ</td>
+              <td>– 40 phút</td>
+            </tr>
+            <tr>
+              <td>Làm thủ tục trực tuyến</td>
+              <td>Trong vòng 24 giờ</td>
+              <td>– 60 phút</td>
+            </tr>
+            <tr>
+              <td>Làm thủ tục qua thiết bị di động</td>
+              <td>Trong vòng 24 giờ</td>
+              <td>– 60 phút</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</div>
+{% endblock%}

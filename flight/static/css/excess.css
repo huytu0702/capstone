@@ -1,0 +1,121 @@
+.container2 {
+    max-width: 60em;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+h1,
+h2,
+h3 {
+    color: #003f8a;
+}
+
+p {
+    color: #333333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Bảng */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+thead th {
+    background-color: #003f8a;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #007bff;
+}
+
+tbody td {
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #333333;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tbody tr:hover {
+    background-color: #e8eef7;
+    transition: background-color 0.3s ease;
+}
+
+/* Đường viền giữa các ô */
+tbody td,
+thead th {
+    border: 1px solid #ddd;
+}
+
+/* Tiêu đề cột lớn */
+thead th[colspan] {
+    background-color: #0056b3;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Tô đậm dòng đầu tiên của tbody */
+tbody tr:first-child td {
+    font-weight: bold;
+}
+
+/* Responsive - Bảng cuộn ngang trên thiết bị nhỏ */
+.table-container {
+    overflow-x: auto;
+}
+
+table caption {
+    text-align: left;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Chú thích */
+.notice {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffeeba;
+    padding: 10px 15px;
+    margin: 20px 0;
+    color: #856404;
+}
