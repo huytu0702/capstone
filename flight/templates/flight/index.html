@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block head %}
-    <title>Home | Flight</title>
+    <title>Q Airways - Hơn cả một chuyến bay</title>
     <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
     <style>
         .navbar {
@@ -186,9 +186,8 @@
                         <div class="input-row">
                             <label for="seat_class" class="form_label">Loại ghế: </label>
                             <select name="SeatClass" id="SeatType" class="form-control selectpicker">
-                                <option value="economy" {% if seat == 'economy' %}selected{% endif %}>Thường</option>
-                                <option value="business" {% if seat == 'business' %}selected{% endif %}>Thương gia</option>
-                                <option value="first" {% if seat == 'first' %}selected{% endif %}>VIP</option>
+                                <option value="economy" {% if seat == 'economy' %}selected{% endif %}>Economy</option>
+                                <option value="business" {% if seat == 'business' %}selected{% endif %}>Business</option>
                             </select>
                         </div>
                         <div class="input-row">

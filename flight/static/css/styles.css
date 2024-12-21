@@ -207,3 +207,38 @@ select.form-control {
     color: white;
     font-size: 20px;
 }
+
+.dropdown-menu-custom {
+    display: none;
+    /* Ẩn mặc định */
+    padding: 20px;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    top: 100%;
+    position: absolute;
+    z-index: 1050;
+}
+
+/* Hiện dropdown khi hover */
+.nav-item.dropdown:hover .dropdown-menu-custom {
+    display: block;
+}
+
+/* Kiểu chữ và khoảng cách cho dropdown */
+.dropdown-menu-custom h6 {
+    font-size: 16px;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.dropdown-menu-custom .dropdown-item {
+    color: #007bff;
+    padding: 5px 0;
+}
+
+.dropdown-menu-custom .dropdown-item:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
